@@ -1,3 +1,4 @@
+using Logic.RabbitMq;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using ProducerApi.Config;
 
@@ -12,6 +13,7 @@ builder.Services.AddControllers(options =>
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddSingleton(sp => new RabbitMqClient());
 
 var app = builder.Build();
 
