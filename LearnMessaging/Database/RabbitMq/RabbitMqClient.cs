@@ -10,7 +10,7 @@ namespace Logic.RabbitMq
         public readonly IChannel _channel;
         private readonly IConnection _connection;
 
-        public RabbitMqClient(string hostName = "localhost", string userName = "rabbitmq", string password = "rabbitmq")
+        public RabbitMqClient(string hostName = "localhost", string userName = "guest", string password = "guest")
         {
             var factory = new ConnectionFactory
             {
