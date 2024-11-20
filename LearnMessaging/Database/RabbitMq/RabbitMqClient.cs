@@ -6,8 +6,8 @@ namespace Logic.RabbitMq
 {
     public class RabbitMqClient
     {
-        private const string OrdersQueue = "Orders";
-        private readonly IChannel _channel;
+        public const string OrdersQueue = "Orders";
+        public readonly IChannel _channel;
         private readonly IConnection _connection;
 
         public RabbitMqClient(string hostName = "localhost", string userName = "rabbitmq", string password = "rabbitmq")

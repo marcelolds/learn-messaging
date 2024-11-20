@@ -1,2 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using ConsumerService.Listeners;
+
+var listener = new OrdersListener(new Logic.RabbitMq.RabbitMqClient());
+listener.ProcessQueues();
